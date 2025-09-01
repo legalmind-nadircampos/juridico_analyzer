@@ -1,0 +1,254 @@
+# Classificação de tipos processuais
+
+CIVEL:
+  acoes:
+    - "ação de cobrança"
+    - "ação de indenização"
+    - "ação declaratória"
+    - "ação anulatória"
+    - "ação de despejo"
+    - "ação de consignação em pagamento"
+    - "ação de usucapião"
+    - "ação de dissolução societária"
+    - "ação monitória"
+    - "ação revisional"
+    - "ação de alimentos"
+    - "ação de divórcio"
+    - "ação de reconhecimento de união estável"
+  
+  recursos:
+    - "apelação cível"
+    - "agravo de instrumento"
+    - "embargos de declaração"
+    - "recurso especial"
+    - "recurso extraordinário"
+  
+  keywords:
+    - "direito civil"
+    - "código civil"
+    - "danos morais"
+    - "danos materiais"
+    - "contrato"
+    - "responsabilidade civil"
+
+PENAL:
+  acoes:
+    - "ação penal"
+    - "denúncia criminal"
+    - "queixa-crime"
+    - "habeas corpus"
+    - "revisão criminal"
+    - "mandado de segurança"
+  
+  recursos:
+    - "apelação criminal"
+    - "recurso em sentido estrito"
+    - "embargos infringentes"
+    - "recurso especial"
+    - "recurso extraordinário"
+  
+  keywords:
+    - "código penal"
+    - "crime"
+    - "delito"
+    - "contravenção"
+    - "pena"
+    - "prisão"
+    - "ministério público"
+
+TRABALHISTA:
+  acoes:
+    - "reclamação trabalhista"
+    - "ação de consignação em pagamento"
+    - "ação anulatória de auto de infração"
+    - "mandado de segurança"
+    - "ação civil pública"
+  
+  recursos:
+    - "recurso ordinário"
+    - "recurso de revista"
+    - "embargos de declaração"
+    - "agravo de petição"
+    - "agravo de instrumento"
+  
+  keywords:
+    - "clt"
+    - "consolidação das leis do trabalho"
+    - "empregado"
+    - "empregador"
+    - "rescisão"
+    - "fgts"
+    - "13º salário"
+    - "férias"
+    - "horas extras"
+
+PREVIDENCIARIO:
+  acoes:
+    - "ação previdenciária"
+    - "ação de aposentadoria"
+    - "ação de auxílio-doença"
+    - "ação de pensão por morte"
+    - "ação de benefício assistencial"
+    - "ação de revisão de benefício"
+  
+  recursos:
+    - "apelação"
+    - "recurso especial"
+    - "recurso extraordinário"
+    - "agravo de instrumento"
+  
+  keywords:
+    - "inss"
+    - "previdência social"
+    - "benefício"
+    - "aposentadoria"
+    - "auxílio"
+    - "pensão"
+    - "segurado"
+
+ADMINISTRATIVO:
+  acoes:
+    - "mandado de segurança"
+    - "ação anulatória"
+    - "ação declaratória"
+    - "ação de nulidade"
+    - "ação civil pública"
+  
+  recursos:
+    - "apelação"
+    - "recurso especial"
+    - "recurso extraordinário"
+    - "agravo de instrumento"
+  
+  keywords:
+    - "administração pública"
+    - "ato administrativo"
+    - "servidor público"
+    - "licitação"
+    - "concurso público"
+    - "poder público"
+
+TRIBUTARIO:
+  acoes:
+    - "ação anulatória de débito fiscal"
+    - "mandado de segurança"
+    - "ação declaratória"
+    - "ação de repetição de indébito"
+    - "execução fiscal"
+  
+  recursos:
+    - "apelação"
+    - "recurso especial"
+    - "recurso extraordinário"
+    - "agravo de instrumento"
+  
+  keywords:
+    - "tributo"
+    - "imposto"
+    - "contribuição"
+    - "receita federal"
+    - "fazenda"
+    - "icms"
+    - "ipi"
+    - "ir"
+    - "cofins"
+    - "pis"
+
+FAMILIA:
+  acoes:
+    - "ação de divórcio"
+    - "ação de alimentos"
+    - "ação de guarda"
+    - "ação de investigação de paternidade"
+    - "ação de união estável"
+    - "ação de adoção"
+  
+  recursos:
+    - "apelação"
+    - "agravo de instrumento"
+    - "embargos de declaração"
+  
+  keywords:
+    - "família"
+    - "casamento"
+    - "união estável"
+    - "filhos"
+    - "guarda"
+    - "alimentos"
+    - "partilha"
+
+INSTANCIAS:
+  primeira:
+    - "1ª vara"
+    - "vara única"
+    - "juizado especial"
+    - "juiz de direito"
+    - "juíza de direito"
+  
+  segunda:
+    - "tribunal de justiça"
+    - "tjsp"
+    - "tjrj"
+    - "tjmg"
+    - "desembargador"
+    - "desembargadora"
+    - "câmara"
+    - "turma"
+  
+  superior:
+    - "superior tribunal de justiça"
+    - "stj"
+    - "ministro"
+    - "ministra"
+  
+  suprema:
+    - "supremo tribunal federal"
+    - "stf"
+
+DECISOES_TIPOS:
+  sentenca:
+    - "sentença"
+    - "julgo procedente"
+    - "julgo improcedente"
+    - "julgo parcialmente procedente"
+    - "julgo extinto"
+  
+  acordao:
+    - "acórdão"
+    - "por unanimidade"
+    - "por maioria"
+    - "deu-se provimento"
+    - "negou-se provimento"
+  
+  despacho:
+    - "despacho"
+    - "determino"
+    - "intime-se"
+    - "cite-se"
+    - "cumpra-se"
+  
+  decisao_interlocutoria:
+    - "decisão interlocutória"
+    - "defiro"
+    - "indefiro"
+    - "tutela antecipada"
+    - "liminar"
+
+STATUS_PROCESSO:
+  tramitando:
+    - "em tramitação"
+    - "aguardando"
+    - "pendente"
+    - "em andamento"
+  
+  finalizado:
+    - "arquivado"
+    - "baixado"
+    - "transitado em julgado"
+    - "sentença transitada"
+    - "processo findo"
+  
+  suspenso:
+    - "suspenso"
+    - "sobrestado"
+    - "aguardando julgamento superior"

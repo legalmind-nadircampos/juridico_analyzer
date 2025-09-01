@@ -1,0 +1,63 @@
+# ===================================================================
+# SISTEMA DE ANÁLISE JURÍDICA AUTOMATIZADA - DEPENDÊNCIAS
+# ===================================================================
+
+# 📋 PACOTES PRINCIPAIS DE PROCESSAMENTO
+PyMuPDF==1.24.1
+pdfplumber==0.10.3
+pytesseract==0.3.10
+pillow==10.2.0
+opencv-python-headless==4.9.0.80
+
+# 📊 ANÁLISE DE DADOS E MANIPULAÇÃO
+pandas==2.2.0
+numpy==1.26.4
+scipy==1.11.4
+scikit-learn==1.7.0
+
+# 🧠 NLP E ANÁLISE SEMÂNTICA
+spacy==3.7.2
+sentence-transformers==2.7.0
+transformers==4.36.2
+torch==2.1.2
+faiss-cpu==1.7.4
+nltk==3.8.1
+
+# 📄 GERAÇÃO DE RELATÓRIOS PDF
+reportlab==4.1.0
+matplotlib==3.8.4
+
+# 🔧 UTILITÁRIOS GERAIS
+pyyaml==6.0.1
+python-dotenv==1.0.0
+requests==2.31.0
+beautifulsoup4==4.12.2
+lxml==4.9.4
+python-dateutil==2.8.2
+regex==2023.12.25
+langdetect==1.0.9
+
+# 📝 LOGGING E MONITORAMENTO
+structlog==23.2.0
+
+# 🔐 DEPENDÊNCIAS ESPECÍFICAS PARA HOSTING
+gunicorn==21.2.0
+
+# ===================================================================
+# NOTAS DE INSTALAÇÃO:
+# ===================================================================
+# 
+# 1. Após instalar via pip, execute:
+#    python -m spacy download pt_core_news_sm
+# 
+# 2. Para Tesseract OCR no Ubuntu/Debian:
+#    sudo apt-get install tesseract-ocr tesseract-ocr-por
+# 
+# 3. Para sistemas baseados em Red Hat:
+#    sudo yum install tesseract tesseract-langpack-por
+# 
+# 4. Versão mínima do Python: 3.8+
+# 
+# 5. Memória RAM recomendada: 2GB+ para processamento
+# 
+# ===================================================================

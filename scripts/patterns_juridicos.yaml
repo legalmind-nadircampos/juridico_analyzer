@@ -1,0 +1,92 @@
+# Padrões para extração de informações jurídicas
+
+NUMERO_PROCESSO:
+  - "(?i)(?:processo|autos)\\s*n[°º]?\\s*(\\d{7}[-.]?\\d{2}[-.]?\\d{4}[-.]?\\d{1}[-.]?\\d{2}[-.]?\\d{4})"
+  - "(?i)n[°º]\\s*(\\d{7}[-.]?\\d{2}[-.]?\\d{4}[-.]?\\d{1}[-.]?\\d{2}[-.]?\\d{4})"
+  - "(\\d{7}[-.]?\\d{2}[-.]?\\d{4}[-.]?\\d{1}[-.]?\\d{2}[-.]?\\d{4})"
+
+TIPO_ACAO:
+  - "(?i)ação\\s+(?:civil|penal|trabalhista|previdenciária|administrativa|declaratória|anulatória|de\\s+cobrança)"
+  - "(?i)recurso\\s+(?:de\\s+apelação|especial|extraordinário|em\\s+sentido\\s+estrito|inominado)"
+  - "(?i)processo\\s+(?:cível|criminal|trabalhista|administrativo)"
+  - "(?i)mandado\\s+de\\s+(?:segurança|injunção)"
+  - "(?i)ação\\s+(?:direta\\s+de\\s+)?inconstitucionalidade"
+  - "(?i)habeas\\s+corpus"
+  - "(?i)reclamação\\s+trabalhista"
+  - "(?i)ação\\s+penal"
+  - "(?i)denúncia\\s+criminal"
+  - "(?i)embargos\\s+(?:de\\s+declaração|infringentes)"
+  - "(?i)agravo\\s+(?:de\\s+instrumento|interno|regimental)"
+  - "(?i)ação\\s+de\\s+(?:indenização|danos\\s+morais|cobrança|despejo|consignação)"
+  - "(?i)execução\\s+(?:fiscal|de\\s+título)"
+
+PARTES_PROCESSO:
+  # Polo ativo
+  - "(?i)(?:autor|requerente|impetrante|demandante|exequente)\\s*(?::|-)\\s*([A-ZÁÊÇÕ][A-Za-záêçõüï\\s.,]{5,100})"
+  - "(?i)(?:recorrente|apelante|embargante|agravante)\\s*(?::|-)\\s*([A-ZÁÊÇÕ][A-Za-záêçõüï\\s.,]{5,100})"
+  
+  # Polo passivo
+  - "(?i)(?:réu|requerido|impetrado|demandado|executado)\\s*(?::|-)\\s*([A-ZÁÊÇÕ][A-Za-záêçõüï\\s.,]{5,100})"
+  - "(?i)(?:recorrido|apelado|embargado|agravado)\\s*(?::|-)\\s*([A-ZÁÊÇÕ][A-Za-záêçõüï\\s.,]{5,100})"
+  
+  # Outros
+  - "(?i)(?:terceiro\\s+interessado|assistente|litisconsorte)\\s*(?::|-)\\s*([A-ZÁÊÇÕ][A-Za-záêçõüï\\s.,]{5,100})"
+  - "(?i)ministério\\s+público"
+
+DATAS_RELEVANTES:
+  - "(?i)(?:data\\s+da\\s+)?(?:audiência|sessão)\\s*(?::|-)\\s*(\\d{1,2}[/.-]\\d{1,2}[/.-]\\d{2,4})"
+  - "(?i)(?:prazo\\s+(?:para|até))\\s*(\\d{1,2}[/.-]\\d{1,2}[/.-]\\d{2,4})"
+  - "(?i)(?:julgamento|sentença)\\s*(?:em|:)\\s*(\\d{1,2}[/.-]\\d{1,2}[/.-]\\d{2,4})"
+  - "(?i)(?:publicação|publicado\\s+em)\\s*(?::|-)\\s*(\\d{1,2}[/.-]\\d{1,2}[/.-]\\d{2,4})"
+
+VALORES_MONETARIOS:
+  - "(?i)valor\\s+(?:da\\s+)?causa\\s*(?::|-)\\s*R\\$\\s*([\\d.,]+)"
+  - "(?i)(?:condenação|condenar)\\s*(?:em|ao\\s+pagamento\\s+de)\\s*R\\$\\s*([\\d.,]+)"
+  - "(?i)danos\\s+morais\\s*(?::|no\\s+valor\\s+de)\\s*R\\$\\s*([\\d.,]+)"
+  - "(?i)custas\\s*(?:processuais)?\\s*(?::|-)\\s*R\\$\\s*([\\d.,]+)"
+  - "(?i)honorários\\s*(?:advocatícios)?\\s*(?::|-)\\s*R\\$\\s*([\\d.,]+)"
+
+DECISOES_JUDICIAIS:
+  - "(?i)(?:procedente|improcedente|parcialmente\\s+procedente)"
+  - "(?i)(?:julgo|decido|determino|defiro|indefiro)"
+  - "(?i)(?:sentença|acórdão|decisão)\\s+(?:final|terminativa)"
+  - "(?i)(?:concedo|denego)\\s+(?:a\\s+)?(?:liminar|tutela)"
+  - "(?i)(?:absolvo|condeno|declaro)"
+
+PRAZOS_JURIDICOS:
+  - "(?i)prazo\\s+de\\s+(\\d+)\\s+(?:dias?|meses?|anos?)"
+  - "(?i)(?:no\\s+prazo\\s+de|em|dentro\\s+de)\\s+(\\d+)\\s+(?:dias?|meses?)"
+  - "(?i)(?:quinze|30|60|90)\\s+dias?"
+  - "(?i)(?:quinzenal|mensal|trimestral|anual)"
+
+ORGAOS_JURISDICIONAIS:
+  - "(?i)tribunal\\s+(?:de\\s+justiça|regional|superior|supremo)"
+  - "(?i)vara\\s+(?:cível|criminal|trabalhista|federal)"
+  - "(?i)juízo\\s+(?:de\\s+direito|federal|da)\\s+([A-Za-záêçõ\\s]+)"
+  - "(?i)(?:1ª|2ª|3ª|4ª|5ª)\\s+(?:vara|turma|câmara)"
+  - "(?i)(?:tjsp|tjrj|tjmg|trf|tst|stj|stf)"
+
+ADVOGADOS_PROCURADORES:
+  - "(?i)advogado\\s*(?::|-)\\s*([A-ZÁÊÇÕ][A-Za-záêçõüï\\s.,]{10,80})"
+  - "(?i)procurador\\s*(?::|-)\\s*([A-ZÁÊÇÕ][A-Za-záêçõüï\\s.,]{10,80})"
+  - "(?i)oab[/-]?\\s*(?:[A-Z]{2})?\\s*(\\d{3,6})"
+  - "(?i)defensoria\\s+pública"
+
+SENTENCA_DISPOSITIVO:
+  - "(?i)(?:ante\\s+o\\s+exposto|pelo\\s+exposto|isso\\s+posto)"
+  - "(?i)(?:julgo|decido)\\s+(?:procedente|improcedente|extinto)"
+  - "(?i)(?:condeno|absolvo|declaro)"
+  - "(?i)dispositivo\\s*(?::|-)\\s*([^.]+\\.)"
+  - "(?i)(?:determino|ordeno)\\s+(?:que|a)"
+
+CUSTAS_SUCUMBENCIA:
+  - "(?i)custas\\s+(?:processuais)?\\s+(?:por|pelo)\\s+([A-Za-záêçõ\\s]+)"
+  - "(?i)honorários\\s+(?:advocatícios)?\\s*(?::|-)\\s*([^.]+)"
+  - "(?i)sucumbência\\s*(?::|-)\\s*([^.]+)"
+  - "(?i)gratuidade\\s+(?:da\\s+)?justiça"
+
+RECURSOS_POSSIVEIS:
+  - "(?i)(?:cabível|cabe)\\s+(?:recurso|apelação)"
+  - "(?i)prazo\\s+(?:para\\s+)?recurso\\s*(?::|-)\\s*(\\d+)\\s+dias?"
+  - "(?i)(?:irrecorrível|sem\\s+recurso)"
+  - "(?i)(?:duplo\\s+grau|reexame\\s+necessário)"
